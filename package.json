@@ -2,7 +2,7 @@
   "name": "hector-personal-site",
   "private": true,
   "version": "1.0.0",
-  "description": "One source for hectorr.dev and the Tsinghua personal homepage; datasets remain on Tsinghua.",
+  "description": "One source for GitHub Pages and the Tsinghua personal homepage; datasets remain on Tsinghua.",
   "scripts": {"start": "node server.cjs", "check": "node --check server.cjs && node scripts/check.cjs", "deploy:tsinghua": "bash scripts/deploy-tsinghua.sh"},
   "engines": {"node": ">=22"}
 }
