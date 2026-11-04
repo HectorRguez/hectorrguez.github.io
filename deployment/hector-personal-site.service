@@ -1,0 +1,17 @@
+[Unit]
+Description=Hector personal homepage
+After=network-online.target
+
+[Service]
+Type=simple
+WorkingDirectory=/home/hector/hector-mini/hector-personal-site
+ExecStart=/home/hector/.nvm/versions/node/v22.23.4/bin/node server.cjs
+Environment=NODE_ENV=production
+Environment=PORT=3211
+Restart=on-failure
+RestartSec=5
+NoNewPrivileges=true
+PrivateTmp=true
+
+[Install]
+WantedBy=default.target

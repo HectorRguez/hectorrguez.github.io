@@ -1,0 +1,12 @@
+const fs=require('node:fs');
+const path=require('node:path');
+const assert=require('node:assert/strict');
+const html=fs.readFileSync(path.join(__dirname,'../public/index.html'),'utf8');
+const links=[...html.matchAll(/<a\b[^>]*href="([^"]+)"/g)].map(m=>m[1]);
+const datasets=links.filter(url=>url.endsWith('.zip'));
+assert.equal(datasets.length,18,'All 18 published dataset links must be retained.');
+for(const url of datasets)assert.ok(url.startsWith('https://numbda.cs.tsinghua.edu.cn/~hector/CapBench/v2/downloads/'),url);
+for(const url of links)assert.match(url,/^https:\/\//,'Links must have an explicit upstream host.');
+assert.ok(!html.includes('<script'),'This page needs no JavaScript.');
+for(const file of fs.readdirSync(path.join(__dirname,'../public')))assert.ok(['index.html','favicon.svg'].includes(file),'Only page source and favicon belong here.');
+console.log('Verified 18 Tsinghua-hosted downloads and 6 publication links.');
