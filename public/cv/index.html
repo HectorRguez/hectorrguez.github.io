@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CV · Héctor Rodríguez Rodríguez</title>
+<link rel="icon" type="image/svg+xml" href="../favicon.svg">
+<style>
+  body {
+    font-family: "SF Mono", "Menlo", "Consolas", monospace;
+    background: #f6f7f9;
+    color: #1a1a1a;
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 40px 24px;
+    font-size: 15px;
+    line-height: 1.6;
+  }
+  h1 {
+    font-family: "Georgia", serif;
+    font-size: 2em;
+    font-weight: normal;
+    margin-bottom: 0.2em;
+  }
+  h2 {
+    font-size: 1em;
+    font-weight: bold;
+    margin-top: 2.5em;
+    margin-bottom: 1em;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+  a { color: #1a1a1a; }
+  .item {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 2.2em;
+  }
+  .bullet {
+    flex-shrink: 0;
+    width: 8px;
+    height: 8px;
+    background: #1a1a1a;
+    border-radius: 50%;
+    margin-top: 8px;
+  }
+  .item-body { flex: 1; }
+  .item-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  .item-title { font-weight: bold; }
+  .item-venue { white-space: nowrap; }
+  .item-meta {
+    display: inline-flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2px 14px;
+  }
+  .item-desc {
+    margin-top: 4px;
+    color: #444;
+    font-size: 0.92em;
+  }
+  .ref-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    text-decoration: none;
+    white-space: nowrap;
+  }
+  .ref-link:hover { text-decoration: underline; }
+  .ref-link .ic {
+    width: 1.05em;
+    height: 1.05em;
+    flex-shrink: 0;
+    color: #000;
+  }
+  .tagline { font-family: "Georgia", serif; font-size: 1.1em; margin-top: 0; }
+  .links { display: flex; flex-wrap: wrap; gap: 8px 18px; }
+  .item-desc b { color: #1a1a1a; font-weight: normal; text-decoration: underline; text-underline-offset: 2px; }
+  .entry { margin-bottom: 1.4em; }
+  .entry .item-header { gap: 4px 16px; flex-wrap: nowrap; }
+  .entry .item-title { flex: 1; }
+  nav.tabs + p, nav.tabs + .item { margin-top: 2em; }
+  .plain { list-style: none; padding: 0; margin: 0; }
+  .plain li { margin-bottom: 0.6em; }
+  nav.tabs { display: flex; gap: 22px; margin-top: 2em; padding-bottom: 6px; }
+  nav.tabs a { text-decoration: none; text-transform: uppercase; letter-spacing: 0.05em; color: #555; }
+  nav.tabs a:hover { color: #1a1a1a; }
+  nav.tabs a[aria-current="page"] { color: #1a1a1a; font-weight: bold; text-decoration: underline; text-underline-offset: 8px; text-decoration-thickness: 2px; }
+  .cv-pub { margin-bottom: 0.9em; }
+  .cv-head { display: flex; justify-content: space-between; align-items: baseline; gap: 16px; margin-top: 2.5em; margin-bottom: 1em; }
+  .cv-head h2 { margin: 0; }
+  .pdf-link { color: #1a1a1a; }
+</style>
+</head>
+<body>
+
+<header>
+<h1>Héctor Rodríguez Rodríguez</h1>
+<p class="tagline">Machine-learning solvers that make chip simulation fast enough for the design loop.</p>
+<div class="links">
+  <a class="ref-link" href="https://scholar.google.com/citations?user=726O-xkAAAAJ"><svg class="ic" viewBox="0 0 16 16" aria-hidden="true"><rect width="16" height="16" rx="3" fill="#3E6FC4"/><g fill="none" stroke="#f6f7f9" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 6.6 8 4l5.5 2.6L8 9.2z" fill="#f6f7f9"/><path d="M5 8.1v2.7c1.6 1.3 4.4 1.3 6 0V8.1"/><path d="M13.5 6.6v3.6"/></g></svg>Google Scholar</a>
+  <a class="ref-link" href="https://github.com/HectorRguez"><svg class="ic" viewBox="0 0 16 16" aria-hidden="true"><rect width="16" height="16" rx="3" fill="#1a1a1a"/><g fill="none" stroke="#f6f7f9" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="5.2" cy="4.3" r="1.4"/><circle cx="5.2" cy="11.7" r="1.4"/><circle cx="10.8" cy="5.6" r="1.4"/><path d="M5.2 5.7v4.6"/><path d="M10.8 7c0 2.4-5.6 1.4-5.6 3.3"/></g></svg>GitHub</a>
+  <a class="ref-link" href="https://www.linkedin.com/in/hector-rodriguez-rodriguez-8755042b8/"><svg class="ic" viewBox="0 0 16 16" aria-hidden="true"><rect width="16" height="16" rx="3" fill="#2867B2"/><g fill="none" stroke="#f6f7f9" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="4.9" cy="4.5" r="1.1" fill="#f6f7f9" stroke="none"/><path d="M4.9 7v5"/><path d="M8.2 12V7m0 2.3c0-1.5 1-2.3 2.1-2.3 1.2 0 1.9.8 1.9 2.2V12"/></g></svg>LinkedIn</a>
+  <a class="ref-link" href="mailto:rrhector@icloud.com"><svg class="ic" viewBox="0 0 16 16" aria-hidden="true"><rect width="16" height="16" rx="3" fill="#1F3A5F"/><g fill="none" stroke="#f6f7f9" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4.6" width="10" height="6.8" rx="1"/><path d="M3.6 5.4 8 8.7l4.4-3.3"/></g></svg>rrhector@icloud.com</a>
+</div>
+</header>
+<nav class="tabs"><a href="../">About</a><a href="../cv/" aria-current="page">CV</a><a href="../publications/">Publications</a></nav>
+
+<div class="cv-head"><h2>Education</h2><a class="ref-link pdf-link" href="../Hector-Rodriguez-Rodriguez-CV.pdf"><svg class="ic" viewBox="0 0 16 16" aria-hidden="true"><rect width="16" height="16" rx="3" fill="#5A4E44"/><g fill="none" stroke="#f6f7f9" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3.6v6"/><path d="M5.4 7.2 8 9.8l2.6-2.6"/><path d="M4.2 12.4h7.6"/></g></svg>Download PDF</a></div>
+
+<div class="item entry">
+  <div class="bullet"></div>
+  <div class="item-body">
+    <div class="item-header">
+      <span class="item-title">Master's in Advanced Computing</span>
+      <span class="item-venue">Sep 2024 – Jun 2026</span>
+    </div>
+    <div>Tsinghua University, Beijing, China</div>
+    <div class="item-desc">GPA 4.00/4.00, ranked 1st of 63. Taught in English. Advisor: Prof. Wenjian Yu.<br>Outstanding Master's Thesis: <i>Deep-Learning-Driven 3D Capacitance Extraction for VLSI Interconnects</i>.</div>
+  </div>
+</div>
+<div class="item entry">
+  <div class="bullet"></div>
+  <div class="item-body">
+    <div class="item-header">
+      <span class="item-title">Master's in Industrial Electronics</span>
+      <span class="item-venue">Sep 2023 – Aug 2024</span>
+    </div>
+    <div>Universidad Politécnica de Madrid, Spain</div>
+    <div class="item-desc">Grade 9.66/10, ranked 2nd. Taught in English. Advisor: Prof. Andrés Otero.</div>
+  </div>
+</div>
+<div class="item entry">
+  <div class="bullet"></div>
+  <div class="item-body">
+    <div class="item-header">
+      <span class="item-title">Bachelor's in Electronic Engineering &amp; Industrial Automation</span>
+      <span class="item-venue">Sep 2019 – Sep 2023</span>
+    </div>
+    <div>ULPGC, Spain</div>
+    <div class="item-desc">Grade 9.51/10, highest academic record in the university's Engineering &amp; Architecture branch.</div>
+  </div>
+</div>
+
+<h2>Publications</h2>
+
+<ul class="plain">
+  <li class="cv-pub"><b>DeepRWCap: Neural-Guided Random-Walk Capacitance Solver for IC Design</b> &middot; AAAI 2026 &middot; <a href="https://arxiv.org/abs/2511.06831">arXiv</a><br><span class="item-desc"><b>Héctor Rodríguez Rodríguez</b>*, Jiechen Huang*, and Wenjian Yu. (*equal contribution)</span></li>
+  <li class="cv-pub"><b>CapBench: A Multi-PDK Dataset for ML-Based Post-Layout Capacitance Extraction</b> &middot; DAC 2026 &middot; <a href="https://arxiv.org/abs/2604.11202">arXiv</a><br><span class="item-desc"><b>Héctor Rodríguez Rodríguez</b>, Jiechen Huang, and Wenjian Yu.</span></li>
+  <li class="cv-pub"><b>Flash-CNNCap: Capacitance Extraction via Image Mapping</b> &middot; ICCAD 2026 &middot; <a href="https://arxiv.org/abs/2607.23877">arXiv</a><br><span class="item-desc"><b>Héctor Rodríguez Rodríguez</b>, Jiechen Huang, and Wenjian Yu.</span></li>
+  <li class="cv-pub"><b>AttentionCap: Transformer-Based Capacitance Matrix Learning Toward Full-Chip Extraction</b> &middot; DAC 2026 &middot; <a href="https://arxiv.org/abs/2606.08161">arXiv</a><br><span class="item-desc">Jiechen Huang, <b>Héctor Rodríguez Rodríguez</b>, Dingcheng Yang, Zuochang Ye, Yibo Lin, and Wenjian Yu.</span></li>
+  <li class="cv-pub"><b>Few-shot Learning on AMS Circuits and Its Application to Parasitic Capacitance Prediction</b> &middot; DAC 2025 &middot; <a href="https://arxiv.org/abs/2507.06538">arXiv</a><br><span class="item-desc">Shan Shen, Yibin Zhang, <b>Héctor Rodríguez Rodríguez</b>, and Wenjian Yu.</span></li>
+</ul>
+<p class="item-desc">Code and videos are on the <a href="../publications/">Publications</a> page.</p>
+
+<h2>Experience</h2>
+
+<div class="item entry">
+  <div class="bullet"></div>
+  <div class="item-body">
+    <div class="item-header">
+      <span class="item-title">Software Engineer</span>
+      <span class="item-venue">Nov 2025 – Present</span>
+    </div>
+    <div><a href="https://edugenia.com/">Edugenia</a>, EdTech start-up, Spain</div>
+    <div class="item-desc">Built agentic course-generation workflows with the OpenAI Agents SDK and MCP, and a self-hosted GPU inference service on Modal that cut image costs by ~75% and cold starts from 2–3 min to under 40 s.</div>
+  </div>
+</div>
+<div class="item entry">
+  <div class="bullet"></div>
+  <div class="item-body">
+    <div class="item-header">
+      <span class="item-title">Graduate Researcher</span>
+      <span class="item-venue">Nov 2024 – Jun 2026</span>
+    </div>
+    <div>NUMBDA Group, Tsinghua University</div>
+    <div class="item-desc">Led ML capacitance extraction work end to end: a CUDA/LibTorch random-walk engine within 1.24% of Raphael, an open 61k-window multi-PDK dataset built with OpenROAD, and an O(n) CNN matrix extractor 17.5× faster than prior work.</div>
+  </div>
+</div>
+<div class="item entry">
+  <div class="bullet"></div>
+  <div class="item-body">
+    <div class="item-header">
+      <span class="item-title">Master's Researcher</span>
+      <span class="item-venue">Oct 2023 – Jul 2024</span>
+    </div>
+    <div>Center for Industrial Electronics, Universidad Politécnica de Madrid</div>
+    <div class="item-desc">Designed a microelectrode array for neural cultures, coordinating fabrication across three UPM research centres, and built an FPGA accelerator for spiking-neural-network digital twins (2–10× faster than CPU).</div>
+  </div>
+</div>
+
+<h2>Honors &amp; Service</h2>
+
+<ul class="plain">
+  <li>Outstanding Master's Thesis (1 of 3 in CS Dept) and Excellent Graduate (1 of 10), Tsinghua University &middot; 2026</li>
+  <li>Chinese Government Scholarship, Type A, full funding for graduate study at Tsinghua &middot; 2024</li>
+  <li>Best Academic Record, Engineering &amp; Architecture branch, ULPGC &middot; 2025</li>
+  <li>Beca Santander Progreso, ranked 1st in the School of Engineering, ULPGC &middot; 2022, 2023</li>
+  <li>Reviewer, IEEE Transactions on Computer-Aided Design of Integrated Circuits and Systems (TCAD)</li>
+</ul>
+
+<h2>Skills &amp; Interests</h2>
+
+<ul class="plain">
+  <li><b>Technical:</b> Python, PyTorch, CUDA, C/C++, LibTorch; LLM agents (OpenAI Agents SDK, MCP); OpenROAD, OpenRCX; FPGA design.</li>
+  <li><b>Languages:</b> Spanish (native), English (fluent).</li>
+  <li><b>Interests:</b> chess (FIDE 1900+), powerlifting (5th in weight class, Tsinghua competition), rock climbing.</li>
+</ul>
+
+</body>
+</html>

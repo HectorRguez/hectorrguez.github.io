@@ -8,13 +8,14 @@ const server=http.createServer((req,res)=>{
     if(!['GET','HEAD'].includes(req.method)){res.writeHead(405,{'Allow':'GET, HEAD'});return res.end();}
     const url=new URL(req.url,'http://localhost');
     if(url.pathname==='/healthz'){res.writeHead(200,{'Content-Type':'application/json','Cache-Control':'no-store'});return res.end(req.method==='HEAD'?undefined:'{"status":"ok"}');}
-    const file={'/':'index.html','/index.html':'index.html','/favicon.svg':'favicon.svg'}[url.pathname];
+    if(['/cv','/publications'].includes(url.pathname)){res.writeHead(301,{'Location':url.pathname+'/'});return res.end();}
+    const file={'/':'index.html','/index.html':'index.html','/favicon.svg':'favicon.svg','/publications/':'publications/index.html','/cv/':'cv/index.html','/photo.jpg':'photo.jpg','/Hector-Rodriguez-Rodriguez-CV.pdf':'Hector-Rodriguez-Rodriguez-CV.pdf'}[url.pathname];
     if(!file){res.writeHead(404,{'Content-Type':'text/plain; charset=utf-8'});return res.end(req.method==='HEAD'?undefined:'Not found');}
     try {
         const data=fs.readFileSync(path.join(root,file));
-        const style=file==='index.html'?data.toString().match(/<style>([\s\S]*?)<\/style>/)?.[1]:null;
+        const style=file.endsWith('.html')?data.toString().match(/<style>([\s\S]*?)<\/style>/)?.[1]:null;
         const etag='"'+createHash('sha256').update(data).digest('hex')+'"';
-        res.setHeader('Content-Type',file.endsWith('.svg')?'image/svg+xml':'text/html; charset=utf-8');
+        res.setHeader('Content-Type',file.endsWith('.svg')?'image/svg+xml':file.endsWith('.jpg')?'image/jpeg':file.endsWith('.pdf')?'application/pdf':'text/html; charset=utf-8');
         res.setHeader('Cache-Control','public, max-age=60, must-revalidate');
         res.setHeader('ETag',etag);
         res.setHeader('X-Content-Type-Options','nosniff');
