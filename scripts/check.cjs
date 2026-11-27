@@ -1,11 +1,11 @@
 const fs=require('node:fs');
 const path=require('node:path');
 const assert=require('node:assert/strict');
-const pages=['index.html','publications/index.html','cv/index.html'];
+const pages=['index.html','cv/index.html'];
 const PDF='Hector-Rodriguez-Rodriguez-CV.pdf';
 const html=pages.map(p=>fs.readFileSync(path.join(__dirname,'../public',p),'utf8')).join('\n');
 const links=[...html.matchAll(/<a\b[^>]*href="([^"]+)"/g)].map(m=>m[1]);
-for(const url of links)assert.match(url,/^(https:\/\/|mailto:|\.\/$|(\.\.\/)?(|cv\/|publications\/|Hector-Rodriguez-Rodriguez-CV\.pdf)$)/,'Links must have an explicit upstream host or point at a page of this site.');
+for(const url of links)assert.match(url,/^(https:\/\/|mailto:|\.\/$|(\.\.\/)?(|cv\/|Hector-Rodriguez-Rodriguez-CV\.pdf)$)/,'Links must have an explicit upstream host or point at a page of this site.');
 assert.ok(!html.includes('<script'),'This page needs no JavaScript.');
 const files=fs.readdirSync(path.join(__dirname,'../public'),{recursive:true}).filter(f=>fs.statSync(path.join(__dirname,'../public',f)).isFile());
 for(const file of files)assert.ok([...pages,'favicon.svg','photo.jpg',PDF].includes(file),'Unexpected file in public/: '+file);
