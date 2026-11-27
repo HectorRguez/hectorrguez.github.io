@@ -96,7 +96,8 @@
   h2.first { margin-top: 1.6em; }
   .pdf-link { color: #1a1a1a; }
   .pub-links { margin-top: 4px; font-size: 0.92em; }
-  .light-dots li { position: relative; padding-left: 24px; }
+  .light-dots li { position: relative; padding-left: 24px; display: flex; justify-content: space-between; align-items: baseline; gap: 16px; }
+  .light-dots .h-date { white-space: nowrap; }
   .light-dots li::before { content: ""; position: absolute; left: 1px; top: 0.62em; width: 6px; height: 6px; border-radius: 50%; background: #a3a9b1; }
 </style>
 </head>
@@ -218,7 +219,7 @@
       <span class="item-venue">Nov 2025 – Present</span>
     </div>
     <div><a href="https://edugenia.com/">Edugenia</a>, EdTech start-up, Spain</div>
-    <div class="item-desc">Built agentic course-generation workflows with the OpenAI Agents SDK and MCP, and a self-hosted GPU inference service on Modal that cut image costs by ~75% and cold starts from 2–3 min to under 40 s.</div>
+    <div class="item-desc">LLM agent workflows (OpenAI Agents SDK, MCP) and self-hosted GPU inference.</div>
   </div>
 </div>
 <div class="item entry">
@@ -229,7 +230,7 @@
       <span class="item-venue">Nov 2024 – Jun 2026</span>
     </div>
     <div>NUMBDA Group, Tsinghua University</div>
-    <div class="item-desc">Led ML capacitance extraction work end to end: a CUDA/LibTorch random-walk engine within 1.24% of Raphael, an open 61k-window multi-PDK dataset built with OpenROAD, and an O(n) CNN matrix extractor 17.5× faster than prior work.</div>
+    <div class="item-desc">Led ML capacitance extraction work, with three first-author papers.</div>
   </div>
 </div>
 <div class="item entry">
@@ -240,19 +241,19 @@
       <span class="item-venue">Oct 2023 – Jul 2024</span>
     </div>
     <div>Center for Industrial Electronics, Universidad Politécnica de Madrid</div>
-    <div class="item-desc">Designed a microelectrode array for neural cultures, coordinating fabrication across three UPM research centres, and carried out its RC measurement, modelling and analysis. Built an FPGA accelerator for spiking-neural-network digital twins (2–10× faster than CPU).</div>
+    <div class="item-desc">Microelectrode array with RC measurement and modelling; FPGA SNN accelerator.</div>
   </div>
 </div>
 
 <h2>Honors &amp; Service</h2>
 
 <ul class="plain light-dots">
-  <li><b>Outstanding Master's Thesis</b> (<b>1 of 3</b> in CS Dept), Tsinghua &middot; 2026</li>
-  <li><b>Excellent Graduate</b> (<b>1 of 10</b>), Tsinghua &middot; 2026</li>
-  <li><b>Chinese Government Scholarship</b>, full funding for graduate study &middot; 2024</li>
-  <li><b>Best Academic Record</b>, Engineering &amp; Architecture branch, ULPGC &middot; 2025</li>
-  <li><b>Beca Santander Progreso</b>, ranked <b>1st</b> in the School of Engineering, ULPGC &middot; 2022, 2023</li>
-  <li><b>Reviewer</b>, IEEE Transactions on Computer-Aided Design of Integrated Circuits and Systems (TCAD)</li>
+  <li><span><b>Outstanding Master's Thesis</b> (1 of 3 in CS Dept), Tsinghua</span><span class="h-date">2026</span></li>
+  <li><span><b>Excellent Graduate</b> (1 of 10), Tsinghua</span><span class="h-date">2026</span></li>
+  <li><span><b>Chinese Government Scholarship</b>, full funding for graduate study</span><span class="h-date">2024</span></li>
+  <li><span><b>Best Academic Record</b>, Engineering &amp; Architecture branch, ULPGC</span><span class="h-date">2025</span></li>
+  <li><span><b>Beca Santander Progreso</b>, ranked 1st in the School of Engineering, ULPGC</span><span class="h-date">2022, 2023</span></li>
+  <li><span><b>Reviewer</b>, IEEE Transactions on Computer-Aided Design of Integrated Circuits and Systems (TCAD)</span></li>
 </ul>
 
 </body>
