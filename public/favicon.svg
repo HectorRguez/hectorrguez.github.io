@@ -1,4 +1,1 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
-  <rect width="64" height="64" rx="10" fill="#1a1a1a"/>
-  <text x="32" y="41" fill="#f6f7f9" font-family="monospace" font-size="28" font-weight="700" text-anchor="middle">HR</text>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><style>.s{stroke:#1a1a1a}@media (prefers-color-scheme: dark){.s{stroke:#f6f7f9}}</style><path class="s" d="M6 32h20M38 32h20" stroke-width="6" stroke-linecap="round" fill="none"/><path class="s" d="M26 12v40M38 12v40" stroke-width="7" stroke-linecap="round"/></svg>
