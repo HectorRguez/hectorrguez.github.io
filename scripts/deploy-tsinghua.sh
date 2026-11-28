@@ -4,6 +4,7 @@ cd "$(dirname "$0")/.."
 node scripts/check.cjs
 # Explicit file list: never synchronize or delete the hosted dataset directories.
 ssh numbda-web 'mkdir -p ~/website-backups; cp ~/public_html/index.html ~/website-backups/index-before-github-$(date -u +%Y%m%dT%H%M%SZ).html'
-ssh numbda-web 'mkdir -p ~/public_html/cv'
+ssh numbda-web 'mkdir -p ~/public_html/cv ~/public_html/fonts'
 scp public/index.html public/favicon.svg public/photo.jpg public/Hector-Rodriguez-Rodriguez-CV.pdf numbda-web:public_html/
 scp public/cv/index.html numbda-web:public_html/cv/
+scp public/fonts/geist-mono-400.woff2 public/fonts/geist-mono-600.woff2 public/fonts/OFL.txt numbda-web:public_html/fonts/

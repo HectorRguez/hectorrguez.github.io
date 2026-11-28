@@ -8,6 +8,6 @@ const links=[...html.matchAll(/<a\b[^>]*href="([^"]+)"/g)].map(m=>m[1]);
 for(const url of links)assert.match(url,/^(https:\/\/|mailto:|\.\/$|(\.\.\/)?(|cv\/|Hector-Rodriguez-Rodriguez-CV\.pdf)$)/,'Links must have an explicit upstream host or point at a page of this site.');
 assert.ok(!html.includes('<script'),'This page needs no JavaScript.');
 const files=fs.readdirSync(path.join(__dirname,'../public'),{recursive:true}).filter(f=>fs.statSync(path.join(__dirname,'../public',f)).isFile());
-for(const file of files)assert.ok([...pages,'favicon.svg','photo.jpg',PDF].includes(file),'Unexpected file in public/: '+file);
+for(const file of files)assert.ok([...pages,'favicon.svg','photo.jpg',PDF,'fonts/geist-mono-400.woff2','fonts/geist-mono-600.woff2','fonts/OFL.txt'].includes(file),'Unexpected file in public/: '+file);
 assert.ok(!/\+\d|tel:|\d{3}[ .-]?\d{3}[ .-]?\d{3}/.test(html.replace(/<svg[\s\S]*?<\/svg>/g,'').replace(/\d{4}\.\d{5}/g,'')),'No phone numbers on the page.');
 console.log(`Verified ${links.filter(u=>/arxiv\.org|github\.com\/THU-numbda/.test(u)).length} publication links.`);

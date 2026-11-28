@@ -17,3 +17,5 @@ Run `npm start` to preview on http://127.0.0.1:3211.
 
 GitHub Pages serves the personal site without depending on this machine being online.
 The Node server is only a local preview. There is no custom domain or production tunnel for this site.
+
+The pages use Geist Mono (SIL OFL 1.1), self-hosted in `public/fonts/` from `@fontsource/geist-mono@5.3.0` (latin subset, weights 400 and 600).
